@@ -1,0 +1,19 @@
+Implementieren Sie eine Hash-Tabelle HashMap<T> mit Strings als Schlüsseln und einem beliebigen Typ T für die Werte.
+
+    Mit get() greifen Sie auf die Werte der Tabelle zu. Falls ein Schlüssel nicht vorhanden ist, wird null zurückgeliefert.
+
+    Mit add() fügen Sie Werte ein. Die Methode soll false zurückliefern falls kein Platz zum Einfügen gefunden wird. Doppelte Schlüssel werden wie üblich überschrieben.
+
+    size() soll die Anzahl der belegten Stellen der Hash-Tabelle zurückliefern, fillRatio() den Füllgrad.
+
+    toList() liefert eine (java.util)-Liste mit den Nutzdaten der belegten Zellen. Zur konkreten Relisierung können Sie java.util.LinkedList verwenden.
+
+    hashcode() liefert den Hash-Wert: Ein String k=k1k2...kn
+
+wird mit der Hash-Funktion aus den Vorlesungsvideos auf einen Hash-Code abgebildet (N ∈ N+ sei die Größe der Tabelle, B ∈ N+ die Basis):
+
+h(k)=(k1 ⋅ B^(n−1) + k2 ⋅ B(n−2) +...+ kn−1 ⋅ B^1 + kn ⋅ B^0) % N,
+
+Vermeiden Sie Überläufe mit dem Horner-Schema. Um Kollisionen zu behandeln sondieren Sie maximal N-mal mit folgender rekursiver Funktion (m sei die Anzahl der Sondierungen):
+g(m + 1)=(g(m) + 2m + 1) % N
+g(0)=h(s).
