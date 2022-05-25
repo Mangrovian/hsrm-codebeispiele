@@ -1,4 +1,0 @@
-Die original Aufgabenstellung war nicht mehr zugänglich.
-
-Hauptaufgabe war das Umsetzen eines UML-Klassen- und Sequenzdiagramms. Ziel war die erfolgreiche Umsetzung von UML in Code.
-Anschließend sollte darauf aufbauend das Visitor-Muster umgesetzt werden.
